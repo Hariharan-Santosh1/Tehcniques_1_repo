@@ -153,12 +153,13 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species, sha
 #Make it flipper length vs bill length vs species 
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species, shape = sex)) +
   geom_jitter(width = 0.7, alpha = 1) +
-  theme_minimal() +
+  theme_bw() +
   labs(
     x = "Bill Length (mm)",
     y = "Flipper Length (mm)",
     title = "Penguin Bill Length vs Flipper Length vs Species"
   ) +
   theme(plot.title = element_text(hjust = 0.5))+
-  facet_wrap (~island, ncol = 3) 
+  facet_wrap(~island, ncol =3)
+
 # Make it flipper leng vs bill depth vs species 
